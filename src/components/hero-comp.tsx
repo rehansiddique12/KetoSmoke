@@ -1,6 +1,6 @@
 import rounded1 from "../assets/img/herobg.png";
-import Navber from "./Navber";
 import Herosection from "./hero-section";
+import Navber from "./navber";
 
 const Herocomp = () => {
   return (
