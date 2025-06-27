@@ -3,21 +3,62 @@ import { Profile, ShoppingBag, ShoppingCart } from "iconsax-react";
 import logo from "../assets/img/logo.png";
 import MaxWidthWrapper from "./max-width-wrapper";
 
+import comming from "../assets/img/commingsoon.avif";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+
+
 const Navber = () => {
   return (
     <div className="fixed z-[50] w-full bg-transparent backdrop-blur-sm">
       <MaxWidthWrapper>
-        <div className="flex w-full items-center justify-between py-5">
+        <div className="flex w-full items-center justify-between py-1">
           <div className="flex items-center">
-            <img src={logo} alt="" className="h-20 cursor-pointer" />
-            <div className="text-gray ml-36 flex gap-16 text-xl">
+            <img src={logo} alt="" className="h-16 cursor-pointer mt-1" />
+            <div className="text-gray ml-36 flex gap-10 text-xl">
               <p className="cursor-pointer rounded-full bg-black/20 px-4 py-0.5">
                 Home
               </p>
-              <p className="cursor-pointer">Products</p>
-              <p className="cursor-pointer">Shop</p>
+            <Dialog>
+              <form>
+                    <div className="flex gap-10">
+                        <DialogTrigger asChild>
+                        <Button className="cursor-pointer bg-transparent text-gray rounded-full px-4 py-0.5 shadow-none text-xl hover:bg-black/20">About Us</Button>
+                      </DialogTrigger>
+                      <DialogTrigger asChild>
+                        <Button className="cursor-pointer bg-transparent text-gray rounded-full px-4 py-0.5 shadow-none text-xl hover:bg-black/20">Products</Button>
+                      </DialogTrigger>
+                      <DialogTrigger asChild>
+                        <Button className="cursor-pointer bg-transparent text-gray rounded-full px-6 py-0.5 shadow-none text-xl hover:bg-black/20">Shop</Button>
+                      </DialogTrigger>
+                      <DialogTrigger asChild>
+                        <Button className="cursor-pointer bg-transparent text-gray rounded-full px-6 py-0.5 shadow-none text-xl hover:bg-black/20">Blog</Button>
+                      </DialogTrigger>
+                    </div>
+                      <DialogContent className="sm:max-w-[625px]">
+                        <DialogHeader>
+                          <DialogDescription>
+                            <img src={comming} alt="" />
+                          </DialogDescription>
+                        </DialogHeader>
+                        
+                        <DialogFooter>
+                        </DialogFooter>
+                      </DialogContent>
+                  </form>
+                </Dialog>
+              {/* <p className="cursor-pointer">Shop</p>
               <p className="cursor-pointer">About us</p>
-              <p className="cursor-pointer">Blog</p>
+              <p className="cursor-pointer">Blog</p> */}
+               
             </div>
           </div>
           <div className="flex items-center gap-6">

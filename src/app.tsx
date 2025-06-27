@@ -1,6 +1,7 @@
+import Mainpage from "./pages/main-page";
 import { Route, Routes } from "react-router-dom";
 
-import Mainpage from "./pages/main-page";
+
 
 const App = () => {
   return (
